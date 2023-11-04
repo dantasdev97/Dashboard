@@ -14,19 +14,23 @@
 }
 
 input[type="date"] {
+    
     display: inline-block;
     background-color: var(--cor-primaria-ligth);
     border-radius: 8rem;
     margin-top: 1rem;
     padding: 0.5rem 1.6rem;
+    margin-left: 3%;
 
 }
 
 
 .texto-001{
+    position: relative;
+    left: 3%;
     width: 17%;
     display: flex;
-    
+    min-width: 310px;
     height: 35px;
     margin-left: 15px;
 }
@@ -116,46 +120,110 @@ input[type="date"] {
     align-items: center;
 
 }
-.recende-ordens{
+
+
+ .recende-ordens a {
+    text-align: center;
+
+ }
+
+.newItem{
     position: relative;
     margin-top: 5rem;
     left: 3%;
-    width: 60%;
+    width: 200px;
 }
 
-.recende-ordens h2{
-    color: var(--texto-cor);
-}
-
-.recende-ordens table{
-    background-color: white;
-    width: 100%;
-    border-radius: 14px;
-    padding: 10px 15px;
-    text-align: center;
-    box-shadow:rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px ;
-    transition: all .3s ease;
-}
-
-.recende-ordens table:hover{
-    box-shadow: none;
-}
-
-table tbody tr{
-    height: 3.8rem;
-    border-bottom: 1px solid var(--texto-cor);
-    color: var(black);
-}
-
-table tbody td{
-    height: 2.6rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.051);
+.newItem{
     
-}
-table tbody tr:last-child td{
-    border: none;
-}
- .recende-ordens a {
-    text-align: center;
+        background-color: white;
+        width: 100%;
+        border-radius: 14px;
+        padding: 10px 15px;
+        text-align: center;
+        box-shadow:rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px ;
+        transition: all .3s ease;
+    
+    }
+
+
+
+ .newItem{
+   display: flex;
+    gap: 10px;
+    align-items: end;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: var(--sidebar-cor);
+    width: 62%;
     
  }
+
+ .divDesc , .divType , .divAmont{
+    display:flex;
+    
+ }
+
+ 
+
+ .newItem>button{
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 34px;
+ }
+
+
+ input, select {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+ }
+
+ table{
+    width: 60%;
+    padding: 20px 0;
+    border-radius: 5px;
+ }
+ th{
+    text-align: start;
+    border-bottom: inset;
+    padding-bottom: 5px;
+ }
+
+ i{
+    font-size: 25px;
+
+ }
+
+.bx-bx-upvote{
+    background-color: red;
+}
+
+.colunAction{
+    width: 40px;
+    text-align: center;
+}
+
+.colunAmont{
+    background: transparent;
+    border: none;
+}
+
+.colunAmont>button{
+    background: transparent;
+    border: none;
+}
+
+.colunAmont{
+    width: 30%;
+}
+
+.colunType{
+    width: 80px;
+    text-align: center;
+}
