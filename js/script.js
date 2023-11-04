@@ -28,62 +28,69 @@ modeSwitch.addEventListener("click", () => {
 
 
 
-const descInput = document.getElementById("desc");
-        const amountInput = document.getElementById("amount");
-        const typeSelect = document.getElementById("type");
-        const tableBody = document.getElementById("tableBody");
-        const totalAmountDisplay = document.getElementById("totalAmount");
-        const btnNew = document.getElementById("btnNew");
 
-        let totalAmount = 0;
 
-        btnNew.addEventListener("click", function() {
-            const description = descInput.value;
-            const amount = parseFloat(amountInput.value);
-            const type = typeSelect.value;
+document.addEventListener("DOMContentLoaded", function() {
+    const descInput = document.getElementById("desc");
+    const amountInput = document.getElementById("amount");
+    const typeSelect = document.getElementById("type");
+    const tableBody = document.querySelector(".divTable table tbody");
+    const totalAmountSpan = document.querySelector(".total-amount");
+    const btnNew = document.getElementById("btnNew");
 
-            if (description && !isNaN(amount)) {
-                const newRow = document.createElement("tr");
-                newRow.innerHTML = `
-                    <td>${description}</td>
-                    <td class="colunAmont">${amount}</td>
-                    <td class="colunType">${type}</td>
-                    <td class="colunAction">
-                        <button class="deleteButton">Deletar</button>
-                    </td>
-                `;
-                tableBody.appendChild(newRow);
+    let totalAmount = parseFloat(totalAmountSpan.textContent);
 
-                if (type === "entrada") {
-                    totalAmount += amount;
-                } else if (type === "saida") {
-                    totalAmount -= amount;
-                }
+    btnNew.addEventListener("click", function() {
+      const description = descInput.value;
+      const amount = parseFloat(amountInput.value);
+      const type = typeSelect.value;
 
-                totalAmountDisplay.textContent = totalAmount;
+      if (description && !isNaN(amount)) {
+        const newRow = document.createElement("tr");
+        newRow.innerHTML = `
+          <td>${description}</td>
+          <td class="colunAmont">${amount.toFixed(2)}</td>
+          <td class="colunType">${type}</td>
+          <td class="colunAction">
+              <button class="deleteButton">Deletar</button>
+          </td>
+        `;
+        tableBody.appendChild(newRow);
 
-                // Limpa os campos de entrada
-                descInput.value = "";
-                amountInput.value = "";
-            }
-        });
+        if (type === "Entrada") {
+          totalAmount += amount;
+        } else if (type === "Saida") {
+          totalAmount -= amount;
+        }
 
-        tableBody.addEventListener("click", function(e) {
-            if (e.target.classList.contains("deleteButton")) {
-                const row = e.target.parentElement.parentElement;
-                const typeCell = row.querySelector(".colunType");
-                const amountCell = row.querySelector(".colunAmont");
-                const type = typeCell.textContent;
-                const amount = parseFloat(amountCell.textContent);
+        totalAmountSpan.textContent = totalAmount.toFixed(2);
 
-                if (type === "entrada") {
-                    totalAmount -= amount;
-                } else if (type === "saida") {
-                    totalAmount += amount;
-                }
+        // Limpa os campos de entrada
+        descInput.value = "";
+        amountInput.value = "";
+      }
+    });
 
-                totalAmountDisplay.textContent = totalAmount;
+    tableBody.addEventListener("click", function(e) {
+      if (e.target.classList.contains("deleteButton")) {
+        const row = e.target.parentElement.parentElement;
+        const typeCell = row.querySelector(".colunType");
+        const amountCell = row.querySelector(".colunAmont");
+        const type = typeCell.textContent;
+        const amount = parseFloat(amountCell.textContent);
 
-                row.remove();
-            }
-        });
+        if (type === "Entrada") {
+          totalAmount -= amount;
+        } else if (type === "Saida") {
+          totalAmount += amount;
+        }
+
+        totalAmountSpan.textContent = totalAmount.toFixed(2);
+
+        row.remove();
+      }
+    });
+  });
+
+
+

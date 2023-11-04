@@ -105,7 +105,7 @@
                         <i class='bx bx-trending-up' ></i>
                         <div class="meio" >
                             <div class="esq">
-                                <h3>Ganhos</h3>
+                                <h3 id="entry">Ganhos</h3>
                                 <h1>25,055</h1>
                             </div>
                             <div class="progresso">
@@ -124,7 +124,7 @@
                         <div class="meio" >
                             <div class="esq">
                                 <h3>Percas</h3>
-                                <h1>25,055</h1>
+                                <h1 id="expenses">25,055</h1>
                             </div>
                             <div class="progresso">
                                 <svg>
@@ -142,7 +142,7 @@
                     <div class="meio" >
                         <div class="esq">
                             <h3>Total </h3>
-                            <h1>25,055</h1>
+                            <span class="total-amount">0.00</span>
                         </div>
                         <div class="progresso">
                             <svg>
@@ -212,6 +212,70 @@
 
 
     </section>
-    <script src="../js/script.js"></script>
+    <script src="../js/script.js">
+
+
+document.addEventListener("DOMContentLoaded", function() {
+        const descInput = document.getElementById("desc");
+        const amountInput = document.getElementById("amount");
+        const typeSelect = document.getElementById("type");
+        const tableBody = document.querySelector(".divTable table tbody");
+        const totalAmountSpan = document.querySelector(".total-amount");
+        const btnNew = document.getElementById("btnNew");
+
+        let totalAmount = parseFloat(totalAmountSpan.textContent);
+
+        btnNew.addEventListener("click", function() {
+            const description = descInput.value;
+            const amount = parseFloat(amountInput.value);
+            const type = typeSelect.value;
+
+            if (description && !isNaN(amount)) {
+                const newRow = document.createElement("tr");
+                newRow.innerHTML = `
+                    <td>${description}</td>
+                    <td class="colunAmont">${amount.toFixed(2)}</td>
+                    <td class="colunType">${type}</td>
+                    <td class="colunAction">
+                        <button class="deleteButton">Deletar</button>
+                    </td>
+                `;
+                tableBody.appendChild(newRow);
+
+                if (type === "Entrada") {
+                    totalAmount += amount;
+                } else if (type === "Saida") {
+                    totalAmount -= amount;
+                }
+
+                totalAmountSpan.textContent = totalAmount.toFixed(2);
+
+                // Limpa os campos de entrada
+                descInput.value = "";
+                amountInput.value = "";
+            }
+        });
+
+        tableBody.addEventListener("click", function(e) {
+            if (e.target.classList.contains("deleteButton")) {
+                const row = e.target.parentElement.parentElement;
+                const typeCell = row.querySelector(".colunType");
+                const amountCell = row.querySelector(".colunAmont");
+                const type = typeCell.textContent;
+                const amount = parseFloat(amountCell.textContent);
+
+                if (type === "Entrada") {
+                    totalAmount -= amount;
+                } else if (type === "Saida") {
+                    totalAmount += amount;
+                }
+
+                totalAmountSpan.textContent = totalAmount.toFixed(2);
+
+                row.remove();
+            }
+        });
+    });
+    </script>
 </body>
 </html>
