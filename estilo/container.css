@@ -1,0 +1,161 @@
+@import url(../web/index.html);
+
+
+.home {
+    margin-top: 1.4rem;
+    width: auto;
+}
+
+.home input{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: var(--texto-cor);
+}
+
+input[type="date"] {
+    display: inline-block;
+    background-color: var(--cor-primaria-ligth);
+    border-radius: 8rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1.6rem;
+
+}
+
+
+.texto-001{
+    width: 17%;
+    display: flex;
+    
+    height: 35px;
+    margin-left: 15px;
+}
+
+
+
+.caixa-03 {
+    display: flex;
+    position: relative;
+    grid-template-columns: repeat(3,1f);
+    flex-direction: row;
+    width: 70%;
+    left: 3%;
+    top: 4%;
+    gap: 12rem;
+    
+}
+
+ .sales{
+    margin-top: 1rem;
+  padding: 2rem;
+   background: white;
+    border-radius: 14px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    transition: all .3s ease;
+    
+}
+
+.sales i {
+    width: 50px;
+    height: 50px;
+}
+
+.sales span{
+    background: coral;
+    padding: 0.5rem;
+    border-radius:50% ;
+    color: var(--cor-primaria-ligth);
+}
+
+.sales .meio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.meio > h1{
+ font-size: 1.6rem;
+}
+.sales .meio h1{
+    font-size: 1.6rem;
+}
+
+.sales .progresso {
+    position: relative;
+    height: 70px;
+    width: 78px;
+    border-radius: 50px;
+}
+
+.sales svg{
+    height: 150px;
+    position: absolute;
+    top: 0;
+}
+
+.sales svg circle{
+    fill: none;
+    stroke: var(--cor-primaria);
+    transform: rotate(270 80 80);
+    stroke-width: 5;
+}
+
+.sales svg circle{
+    stroke-dashoffset: 10;
+    stroke-dasharray: 150;
+}
+
+.sales .progresso .numero{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.recende-ordens{
+    position: relative;
+    margin-top: 5rem;
+    left: 3%;
+    width: 60%;
+}
+
+.recende-ordens h2{
+    color: var(--texto-cor);
+}
+
+.recende-ordens table{
+    background-color: white;
+    width: 100%;
+    border-radius: 14px;
+    padding: 10px 15px;
+    text-align: center;
+    box-shadow:rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px ;
+    transition: all .3s ease;
+}
+
+.recende-ordens table:hover{
+    box-shadow: none;
+}
+
+table tbody tr{
+    height: 3.8rem;
+    border-bottom: 1px solid var(--texto-cor);
+    color: var(black);
+}
+
+table tbody td{
+    height: 2.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.051);
+    
+}
+table tbody tr:last-child td{
+    border: none;
+}
+ .recende-ordens a {
+    text-align: center;
+    
+ }
