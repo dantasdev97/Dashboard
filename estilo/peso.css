@@ -1,0 +1,40 @@
+@import url(../web/cadastrarPeso.html);
+@import url(../estilo/style.css);
+
+
+.home .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    width: 100%;
+    
+}
+
+.panel-row{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+   
+    padding: 10px;
+}
+
+.panel-50{
+    width: 48%;
+    
+}
+.panel-row button{
+    height: 100px;
+    background-color:#695CfE ;
+    font-size: 22px;
+    color: #fff;
+
+}
+.panel-row button:hover{
+    transform: scale(1.10);
+    transition: 0.2s;
+}
+
