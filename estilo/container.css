@@ -36,8 +36,38 @@ input[type="date"] {
 }
 
 
+
+
 div#ajax-content{
     width: 100%;
-    border: 1px solid red;
+    margin-top: 20px;
+    padding: 20px;
+    background-color:white;
+    box-shadow: 0 0 2rem rgba(0,0 0, 0.1, green, blue, alpha);
+    
 }
 
+div#ajax-content {
+    width: 100%;
+    margin-top: 20px;
+    
+    background-color: white;
+}
+
+div#ajax-content button {
+    background-color: brown;
+    color: "#fff";
+
+}
+
+#ajax-content button:hover {
+    transform: scale(1.10);
+    transition: 0.2s;
+}
+
+div#ajax-container{
+    cursor: pointer;
+}
+.dymanic-content{
+    padding: 20px;
+}
