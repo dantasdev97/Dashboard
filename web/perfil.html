@@ -24,9 +24,10 @@
                     <span class="nome">Augusto</span>
                     <span class="profissao">Web devolper</span>
                 </div>
+                 <span class="trabalho" id="profissaoNoSidebar"></span>
             </div>
 
-            <i class='bx bx-right-arrow-alt toggle'></i>
+            <i class='bx bx-right-arrow-alt toggle'  id="toggleSidebar"></i>
 
         </header>
         <div class="menu-bar">
@@ -131,6 +132,20 @@
                                 <option >Feminino</option>
 
                             </select>
+                            
+                          </div>
+                          <div class="mb-3">
+                            <label for="profissao" class="form-label">Profissao</label>
+                            <select  class="form-control" id="profissao" >
+                                <option >Medico</option>
+                                <option >Enfermeiro</option>
+                                <option >Assistente</option>
+                                <option >Policial</option>
+                                <option >Adinistrativo</option>
+                                <option >Outros...</option>
+
+                            </select>
+                            
                           </div>
                           <div class="mb-3">
                             <label for="password" class="form-label">Senha</label>
@@ -144,7 +159,7 @@
                           </div>
 
                        
-                        <button type="submit" class="btn">Salvar</button>
+                        <button type="submit" class="btn" id="enviarBotao">Salvar</button>
                       </form>
                 </div>
             </div>

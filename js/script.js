@@ -108,8 +108,75 @@ document.addEventListener("DOMContentLoaded", function() {
 
         row.remove();
       }
+
+
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const profissaoSelect = document.getElementById('profissao');
+    const profissaoNoSidebar = document.getElementById('profissaoNoSidebar');
+
+    profissaoSelect.addEventListener('change', function () {
+        // Atualiza o conteúdo do elemento span no sidebar com a profissão selecionada
+        profissaoNoSidebar.textContent = 'Profissão: ' + profissaoSelect.value;
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const profissaoSelect = document.getElementById('profissao');
+  const profissaoNoSidebar = document.getElementById('profissaoNoSidebar');
+  const enviarBotao = document.getElementById('enviarBotao');
+
+  enviarBotao.addEventListener('click', function () {
+      // Verifica se uma profissão foi escolhida
+      if (profissaoSelect.value) {
+          // Atualiza o conteúdo do elemento span no sidebar com a profissão escolhida
+          profissaoNoSidebar.textContent = 'Profissão: ' + profissaoSelect.value;
+      } else {
+          // Se nenhuma profissão foi escolhida, você pode lidar com isso conforme necessário
+          alert('Escolha uma profissão antes de enviar!');
+      }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const profissaoSelect = document.getElementById('profissao');
+  const profissaoNoSidebar = document.getElementById('profissaoNoSidebar');
+  const enviarBotao = document.getElementById('enviarBotao');
+  const toggleSidebar = document.getElementById('toggleSidebar');
+  const sidebar = document.querySelector('.sidebar');
+
+  // Função para atualizar a profissão no sidebar
+  function atualizarProfissao() {
+      profissaoNoSidebar.textContent = 'Profissão: ' + profissaoSelect.value;
+  }
+
+  // Adiciona um evento de clique à seta de toggle
+  toggleSidebar.addEventListener('click', function () {
+      // Verifica se o sidebar está aberto
+      const sidebarAberto = sidebar.classList.contains('close');
+
+      // Se o sidebar está aberto, atualiza a profissão
+      if (!sidebarAberto) {
+          atualizarProfissao();
+      }
+  });
+
+  // Adiciona um evento de clique ao botão "Enviar"
+  enviarBotao.addEventListener('click', function () {
+      // Verifica se uma profissão foi escolhida antes de enviar
+      if (profissaoSelect.value) {
+          atualizarProfissao();
+      } else {
+          alert('Escolha uma profissão antes de enviar!');
+      }
+  });
+});
+
+
+
+
 
 
 

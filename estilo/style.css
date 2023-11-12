@@ -321,3 +321,8 @@ body.dark .switch::before{
     
 }
 
+.trabalho {
+    position: relative;
+    left: -130px;
+   bottom: -65px;
+}
