@@ -23,7 +23,26 @@ modeSwitch.addEventListener("click", () => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const sidebarFoto = document.getElementById('sidebarFoto');
+  const inputFoto = document.getElementById('formFile');
+  const enviarBotao = document.getElementById('enviarBotao'); // Adicione um ID ao seu botão de enviar
 
+  enviarBotao.addEventListener('click', function () {
+      const file = inputFoto.files[0];
+
+      if (file) {
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+              // Atualiza a foto de perfil
+              sidebarFoto.src = e.target.result;
+          };
+
+          reader.readAsDataURL(file);
+      }
+  });
+});
 
 
 
