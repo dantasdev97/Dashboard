@@ -26,6 +26,11 @@
     width: 48%;
     
 }
+
+.panel-50:hover{
+    transform: scale(1.05);
+    transition: 0.2s;
+}
 .panel-row button{
     height: 100px;
     background-color:#695CfE ;
@@ -34,9 +39,16 @@
 
 }
 .panel-row button:hover{
-    transform: scale(1.10);
+    transform: scale(1.05);
     transition: 0.2s;
 }
+
+.panel-row button{
+margin-top: 10px;
+font-size: 30px;
+
+}
+
 
 .texto-001{
 padding: 5px 0;

@@ -1,0 +1,99 @@
+div.perfil-parent{
+    
+    padding: 10px 0px;
+}
+
+div.perfil-parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 10%;
+}
+
+div.perfil{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: nowrap;
+ max-width: 1300px;
+ padding: 40px 20px;
+ width: 100%;
+ background-color: white;
+ box-sizing: 0 0 1rem rgba(0, 0, 0,0.1);
+}
+
+div.perfil-img{
+    width: 40%;
+}
+
+div.perfil-form{
+    padding-left: 20px;
+    width: 60%;
+    
+}
+
+form {
+    height: 500px;
+}
+
+div.perfil-form label {
+    font-size: 17px;
+    color: var(--texto-cor);
+}
+
+div.perfil-form input,
+div.perfil-form select {
+    font-size:17px ;
+
+   
+}
+div.perfil-form button{
+    margin-top: 25px;
+}
+
+div.perfil-form input[type=file] {
+    margin-top: 1rem;
+}
+
+div.img {
+    height: 500px;
+    width: 400px;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1) ;
+    background-image: url(../imagens/foto.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border:2px solid #695cfe ;
+    border-radius: 5px;
+}
+
+div.perfil-form button:hover{
+    border: none;
+    color: #fff;
+    transform: scale(1.10);
+    transition: .2s;
+    border: none;
+}
+
+div.perfil-form button {
+    margin-top: 25px;
+    background: #695cfe;
+    color: #fff;
+    height: 40px;
+    width: 80px;
+}
+
+#name, #Email , #idade , #senha , #password{
+    border: 1px solid rgba(0, 0, 0, 0.713);
+    width: 100%;
+    padding: 0px 8px;
+    margin-bottom: 17px;
+    border-radius: 8px;
+    
+}
+
+#name{
+    margin-bottom: 17px;
+}

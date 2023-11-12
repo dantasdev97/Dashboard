@@ -8,6 +8,7 @@
     <!--css-->
 <link rel="stylesheet" href="../estilo/style.css">
 <link rel="stylesheet" href="../estilo/container.css">
+<link rel="stylesheet" href="../estilo/perfil.css">
     <!--box css-->
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
      
@@ -44,15 +45,15 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="cadastrarPeso.html">
                             <i class='bx bx-money-withdraw icon' ></i>
                             <span class="text nav-text">peso</span>
                         </a>
                     </li>
                     <li class="nav-link">
                         <a href="#">
-                            <i class='bx bx-cloud-lightning icon'></i>
-                            <span class="text nav-text">Tempo</span>
+                            <i class='bx bxs-user icon'></i>
+                            <span class="text nav-text">Perfil</span>
                         </a>
                     </li>
                     <li class="nav-link">
@@ -94,43 +95,65 @@
         </div>
     </nav>
     <section class="home">
-        <h1 class="texto-001">Seu controle de finanças</h1>
+        <h1 class="texto-001">Perfil</h1>
         <div class="date">
             <input type="date">
         </div>
-        
-       <div class="panel-row">
-        <button
-         class="panel panel-50"
-         a-view="cadastroPeso"
-         a-folder="peso"
-         onclick="fetchContent(this)">
-         
-            Cadastrar
-        </button>
+        <div class="perfil-parent">
+            <div class="perfil">
+                <div class="perfil-img">
+                    <div class="img">
 
-        <button 
-        class="panel panel-50"
-        a-view="VizualizarPeso"
-         a-folder="peso"
-         onclick="fetchContent(this)">
-        Visualizar peso</button>
+                    </div>
+                </div>
+                <div class="perfil-form">
+                    <form>
+                        <div class="mb-3">
+                          <label for="name" class="form-label">Nome Completo</label>
+                          <input type="text" class="form-control" id="name" 
+                          placeholder="Nome Completo">
+                          
+                        </div>
+                        <div class="mb-3">
+                          <label for="Email" class="form-label">Email</label>
+                          <input type="Email" class="form-control" id="Email"
+                          placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="idade" class="form-label">Idade</label>
+                            <input type="text" class="form-control" id="idade"
+                            placeholder="idade">
+                          </div>
+                          <div class="mb-3">
+                            <label for="genre">Genero</label>
+                            <select  class="form-control" id="genre" >
+                                <option >Masculino</option>
+                                <option >Feminino</option>
 
-       </div>
-<div class="content" id="ajax-content">
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="Email" class="form-control" id="password"
+                            placeholder="Senha">
+                          </div>
+                          <div class="mb-3">
+                            
+                            <label for="formFile" class="form-label">File</label>
+                            <input class="form-control" type="file" id="formFile">
+                          </div>
 
-
-
-</div>
-                
-        
-
+                       
+                        <button type="submit" class="btn">Salvar</button>
+                      </form>
+                </div>
+            </div>
+        </div>
 
     </section>
     <script src="../js/ajax.js"></script>
     <script src="../js/ajax.js"></script>
-let button = document.querySelector('form button.btn')
-button,addEventListener
+
 </script>
 </body>
 </html>
