@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--css-->
+<link rel="stylesheet" href="../estilo/style.css">
+<link rel="stylesheet" href="../estilo/container.css">
+<link rel="stylesheet" href="../estilo/dashboard.css">
+    <!--box css-->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="imagem">
+                    <img src="../imagens/foto.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="nome">Augusto</span>
+                    <span class="profissao">Web devolper</span>
+                </div>
+            </div>
+
+            <i class='bx bx-right-arrow-alt toggle'></i>
+
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <a href="#">
+                        <i class='bx bx-search icon' ></i>
+                       <input type="text" placeholder="Pesquisar...">
+                    </a>
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="dashboard.html">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Carteira</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="cadastrarPeso.html">
+                            <i class='bx bx-money-withdraw icon' ></i>
+                            <span class="text nav-text">peso</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="perfil.html">
+                            <i class='bx bxs-user icon'></i>
+                            <span class="text nav-text">Perfil</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-chat icon' ></i>
+                            <span class="text nav-text">CHAT</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxl-github icon' ></i>
+                            <span class="text nav-text">GIT-HUB</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">SAIR</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="dia-noite">
+                        <i class='bx bx-moon icon' ></i>
+                        <i class='bx bx-sun icon' ></i>
+                    </div>
+                    <span class="mode-text text">Dark-Mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+
+                    </div>
+                </li>
+
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+       <section class="contas contaainer">
+        <div class="cards">
+            <header class="hd-1">
+                <span>Entradas</span>
+                <i class='bx bx-up-arrow-circle icon' id="icon"></i>
+            </header>
+            <p>35,00</p>
+            <div class="cards"></div>
+        </div>
+
+        <div class="cards">
+            <header class="hd-1">
+                <span>Saidas</span>
+                <i class='bx bx-down-arrow-circle icon' ></i>
+                
+            </header>
+            <p>45,00</p>
+            <div class="cards"></div>
+        </div>
+
+        <div class="cards">
+            <header class="hd-1">
+                <span>Total</span>
+                <i class='bx bx-dollar-circle icon' ></i>
+            </header class="hd-1">
+            <div class="cards"></div>
+            <p>450,50</p>
+        </div>
+        <main class="tabela">
+            <button class="btn">nova transacao</button>
+        </main>
+        
+
+       </section>
+       <table class="gerenciar">
+        <tr>
+            <td width="40%">
+                iotgurte de banana
+            </td>
+            <td>
+                <span class="valores"></span>
+            </td>
+            <td>alimentacoes</td>
+            <td>30/07/2023</td>
+        </tr>
+        <tr>
+            <td width="50%">
+                Pastel
+            </td>
+            <td>
+                <span class="sc-csuSiG ehHeqj">- R$&nbsp;5,00</span></td><td>Alimentação</td><td>30/07/2022</td></tr>
+    </table>
+    </section>
+
+    <main class="tabela">
+        <button class="btn" onclick="toggleForm()">Nova transação</button>
+        <form id="transactionForm" style="display: none;">
+            <!-- Seu formulário aqui -->
+            <!-- Exemplo: -->
+            <label for="itemName">Item:</label>
+            <input type="text" id="itemName" name="itemName">
+            
+            <label for="itemValue">Valor:</label>
+            <input type="text" id="itemValue" name="itemValue">
+            
+            <!-- Adicione mais campos conforme necessário -->
+    
+            <button type="submit">Salvar</button>
+        </form>
+    </main>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/script.js">
+
+</script>
+</body>
+</html>
