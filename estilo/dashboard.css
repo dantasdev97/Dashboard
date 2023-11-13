@@ -1,0 +1,18 @@
+.transacao{
+    
+    width: 200px;
+    border: 0px;
+    background: rgba(72, 0, 135, 0.5);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 0px 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    align-items: center;
+    font: 400; 
+}
+
+.transacao h1 {
+    text-align: center;
+    position: fixed;
+}
