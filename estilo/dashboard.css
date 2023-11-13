@@ -45,41 +45,217 @@ p{
 }
 
 .btn{
-   
+   display: flex;
   background: rebeccapurple;
-  display: inline;
+  position: relative;
   width: 150px;
-  border-radius: 6px;
+  left: 0%;
+  top: 30%;
+  margin-left: 1%;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
+    text-align: center;
     height: 3rem;
-    position: absolute;
-    
-    transform: translate(-50%,-50%);
-    z-index: 1;
+    align-items: center;
+    color: white;
+    justify-content: space-evenly;
+    z-index: 99;
 }
 
 
 .janela-modal{
-    width: vw;
-    height: 100vh;
-    background-color: red;
+    width: 100vw;
+   height: 100%;
+    background-color: #ffffff96;
     position: relative;
-    top: 0;
+    top: -35%;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index:1000;
 }
 
 .modal {
-    width: 60%;
+    width: 25%;
     min-height: 450px;
     min-height: 200px;
     background-color: #ffffffab ;
     backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 40px;
+    z-index: 1001;
+}
+
+.fechar{
+    position: absolute;
+    
+    top: -5px;
+    right:-5px ;
+    width: 38px;
+    height: 30px;
+    border: 0;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: rebeccapurple;
+    color: #fff;
+    cursor: pointer;
+}
+
+.janela-modal.abrir{
+    display: flex;
+}
+
+@keyframes abrirmodal {
+    from {
+        opacity: 0;
+        transform: translate3d(0,-20px , -5px);
+    }
+    to{
+        opacity: 1;
+        transform:0,0,0;
+    }
+}
+
+.abrir .modal{
+    animation: abrirmodal 0.5s;
 }
 
 
+form {
+    height: auto;
+    margin: 0 auto;
+}
 
+label {
+  width: 0px;
+}
+label {
+   
+    display: block;
+    margin-bottom: 8px;
+}
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+.button-container button {
+    width: 48%;
+    background-color: #695CfE;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button-container button:hover {
+    background-color: #695CfE;
+}
+#cadastrar {
+    width: 100%;
+    background-color:#695CfE;
+}
+#cadastrar:hover {
+    background-color:#695CfE;
+}
+
+#descricao{
+    border-bottom: 1px solid black;
+}
+
+#preco {
+    border-bottom: 1px solid black;
+}
+
+.button-container{
+    margin-bottom: 2rem;
+}
+
+button#cadastrar{
+ height: 45px;
+ border-radius: 9px;
+ border: none;
+}
+
+
+.divTable {
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.acao {
+    text-align: center;
+}
+
+.acao a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+.acao a.editar {
+    background-color: #2196F3;
+}
+
+.acao a.excluir {
+    background-color: #f44336;
+}
+
+button.enter:hover{
+    background-color: #695cfe9c;
+   
+}
+
+button#cadastrar:hover{
+    background-color:  #695cfe9c;
+} 
+
+.divTable {
+    position: relative;
+    left: 0%;
+    top: 30%;
+    max-width: 750px;
+}
+
+#icc{
+    position: relative;
+   
+    left: -45px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+}
+
+.btn-1{
+ width: 100%;
+ height: 40px;
+ background: rebeccapurple;
+ cursor: pointer;
+}
