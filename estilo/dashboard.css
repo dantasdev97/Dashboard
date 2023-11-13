@@ -45,26 +45,41 @@ p{
 }
 
 .btn{
+   
   background: rebeccapurple;
+  display: inline;
   width: 150px;
   border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
     height: 3rem;
+    position: absolute;
+    
+    transform: translate(-50%,-50%);
+    z-index: 1;
 }
 
 
-
-.gerenciar{
+.janela-modal{
+    width: vw;
+    height: 100vh;
+    background-color: red;
+    position: relative;
+    top: 0;
+    left: 0;
     display: flex;
-    flex-direction: column;
-    align-content: space-between
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
 }
 
-.gerenciar tbody{
-    width: 50%;
+.modal {
+    width: 60%;
+    min-height: 450px;
+    min-height: 200px;
+    background-color: #ffffffab ;
+    backdrop-filter: blur(10px);
 }
 
-.gerenciar tbody tr td{
-    gap:20px;
-}
+
+

@@ -175,13 +175,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
- function toggleForm() {
-        var form = document.getElementById("transactionForm");
-        form.style.display = (form.style.display === "none" || form.style.display === "") ? "block" : "none";
-    }
+ // Selecione o botão pelo ID
+ var btnNovaTransacao = document.getElementById('btnNovaTransacao');
 
+ // Adicione um ouvinte de evento de clique ao botão
+ btnNovaTransacao.addEventListener('click', function() {
+     // Aqui você pode adicionar o código da sua nova função
+     alert('Botão "nova transacao" clicado!');
+     // Adicione o código que você deseja executar ao clicar no botão
+ });
 
-
-
-
-
+ 

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -123,23 +124,32 @@
             <div class="cards"></div>
             <p>450,50</p>
         </div>
+        <main class="tabela">
+            <button class="btn" id="btnAbrirFormulario">Nova Transação</button>
+        </main>
         
-    
-    </section>
-    <div class="btn">clique aq</div>
-
-
-    <div class="janela-modal" id="janela-modal">
-        <div class="modal">
-            <h1>janela modal</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, consectetur iusto? Minus aperiam praesentium voluptas labore, sunt incidunt dolore, iste veniam iusto vero, velit eaque iure recusandae beatae aspernatur totam.</p>
+        <div class="overlay" id="overlay">
+            <div class="modal" id="modal">
+                <span class="close" id="btnFecharFormulario">&times;</span>
+        
+                <form id="formNovaTransacao">
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" id="descricao" name="descricao" required>
+        
+                    <label for="preco">Preço:</label>
+                    <input type="text" id="preco" name="preco" required>
+        
+                    <label for="categoria">Categoria:</label>
+                    <input type="text" id="categoria" name="categoria" required>
+        
+                    <button type="submit" id="btnAdicionarTransacao">Adicionar Transação</button>
+                </form>
+            </div>
         </div>
-    </div>
-
-</div>
+        
+    </section>
     <script src="../js/ajax.js"></script>
-    <script src="../js/script.js"></script>
-    <script src="../js/dash.js"></script>
+    <script src="../js/script.js">
 
 </script>
 </body>
